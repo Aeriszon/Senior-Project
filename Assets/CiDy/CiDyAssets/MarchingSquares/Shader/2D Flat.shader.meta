@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3bfd7d8a6953445a8047f7c1de38d139
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/MarchingSquares/Shader/2D Flat.shader
+  uploadId: 807558

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 95939abf34d68e7499f45270dc4694b2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/Environment/Materials/TrafficLightPost/GreenLightOn.mat
+  uploadId: 835380

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c933f46071c84b928c576e4a37d5f675
+timeCreated: 1454959090
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Buildings/Downtown/BuildingSet/Materials/K_BuildingsA_15.mat
+  uploadId: 807558

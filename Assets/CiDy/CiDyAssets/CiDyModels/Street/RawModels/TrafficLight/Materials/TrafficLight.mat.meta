@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6033313fa1df4e0488159cd312616a8d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Street/RawModels/TrafficLight/Materials/TrafficLight.mat
+  uploadId: 807558

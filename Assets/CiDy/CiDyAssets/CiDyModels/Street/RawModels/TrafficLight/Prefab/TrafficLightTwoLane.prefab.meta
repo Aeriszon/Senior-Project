@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eeba9107f5184358ac5174a6683ae1f9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Street/RawModels/TrafficLight/Prefab/TrafficLightTwoLane.prefab
+  uploadId: 807558

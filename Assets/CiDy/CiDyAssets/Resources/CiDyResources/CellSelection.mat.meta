@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e377afcd6986473eb103055eae37d1ac
+timeCreated: 1453828513
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/CellSelection.mat
+  uploadId: 807558

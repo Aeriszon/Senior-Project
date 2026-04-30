@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: efc9c6f7e71f45ff8529f78e8a880547
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyScripts/CiDyNode.cs
+  uploadId: 807558

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 91f4e76ce771bf04790af018ea70d4b9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanWhite.prefab
+  uploadId: 835380

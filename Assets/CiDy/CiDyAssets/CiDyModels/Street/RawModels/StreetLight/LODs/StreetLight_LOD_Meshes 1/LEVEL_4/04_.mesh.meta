@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b004854f1f74dae47afc7ad898526b0c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Street/RawModels/StreetLight/LODs/StreetLight_LOD_Meshes
+    1/LEVEL_4/04_.mesh
+  uploadId: 807558

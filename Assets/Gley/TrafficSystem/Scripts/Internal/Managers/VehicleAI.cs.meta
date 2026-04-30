@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e2f4dbea0b08e9b45804388da2d4ae6c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/TrafficSystem/Scripts/Internal/Managers/VehicleAI.cs
+  uploadId: 835380

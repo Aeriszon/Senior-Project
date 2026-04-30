@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a81df44c829d82e4eae8a8e2fbc40dd0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/PlayerCar/Prefabs/SmallSedanBody.prefab
+  uploadId: 835380

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 77cfbbb08fbe7ce48815e58e93317a84
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanGreen2.prefab
+  uploadId: 835380

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 511be4a27a18c31499f80e8a6affd5de
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Scripts/Unused/GridEditor.cs
+  uploadId: 835380

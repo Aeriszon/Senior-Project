@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 31b29903c4c842db96cdf21440076bae
+timeCreated: 1456609240
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/NodeMaterial.mat
+  uploadId: 807558

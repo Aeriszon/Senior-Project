@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 902b63166d294d543bf1feadd17e52cc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Street/RawModels/CombineBenchHydrantTrash/Prefab/BenchBinFence.prefab
+  uploadId: 807558

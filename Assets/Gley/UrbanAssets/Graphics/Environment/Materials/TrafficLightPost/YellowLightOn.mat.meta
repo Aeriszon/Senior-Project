@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1d7a1d2efa1b7804f892af9a4b69be8f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/Environment/Materials/TrafficLightPost/YellowLightOn.mat
+  uploadId: 835380

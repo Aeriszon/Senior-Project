@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: eabed02fe0b14a7db979505dfd77dd04
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Editor/CiDyRoadEditor.cs
+  uploadId: 807558

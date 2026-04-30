@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 20b8bc67987584c42975eb967550f1f6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Scripts/Unused/ViewRoadsWindowBase.cs
+  uploadId: 835380

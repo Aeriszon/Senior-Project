@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e26ed39a0c68db14ca7f6d997c23485d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/TrafficSystem/Scripts/Editor/EditorDrawer/IntersectionConverter.cs
+  uploadId: 835380

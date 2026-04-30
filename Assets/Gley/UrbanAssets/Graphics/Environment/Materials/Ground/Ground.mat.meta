@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0ec32d46351fd4c45826b4e22e057f15
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/Environment/Materials/Ground/Ground.mat
+  uploadId: 835380

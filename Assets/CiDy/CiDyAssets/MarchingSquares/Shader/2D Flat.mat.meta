@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c5072ee6b3754c0f80260f364ebf6d58
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/MarchingSquares/Shader/2D Flat.mat
+  uploadId: 807558

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1aa7d9ac9ec34c689b2cda276c3c47da
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/ThirdPartyNotices.txt
+  uploadId: 807558

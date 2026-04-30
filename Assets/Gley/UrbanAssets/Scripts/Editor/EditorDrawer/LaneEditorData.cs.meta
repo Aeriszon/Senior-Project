@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b0b48c8ed94f9a845a16007dd252f23b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Scripts/Editor/EditorDrawer/LaneEditorData.cs
+  uploadId: 835380

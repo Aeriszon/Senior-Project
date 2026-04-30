@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be2f633ab98f93b4bace5866def5bbcf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Buildings/Industrial/LODs/DerelictBrickHouse_LOD_Meshes/LEVEL_4/04_.mesh
+  uploadId: 807558

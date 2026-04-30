@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 10427e9782d5435aa1e873259658a69c
+timeCreated: 1448677475
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Plugins/License_StraightSkeletonNet.txt
+  uploadId: 807558

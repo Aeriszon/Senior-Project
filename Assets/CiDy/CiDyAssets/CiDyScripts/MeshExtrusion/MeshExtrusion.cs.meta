@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b7bca1de582b416b9c3d4525fdde0af0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyScripts/MeshExtrusion/MeshExtrusion.cs
+  uploadId: 807558

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 15fc1e1f876440fdb94482c2275542bd
+timeCreated: 1442776878
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/ActiveRoadMaterial.mat
+  uploadId: 807558

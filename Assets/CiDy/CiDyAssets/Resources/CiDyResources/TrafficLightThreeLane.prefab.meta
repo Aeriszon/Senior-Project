@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2f11f520a71042ee9566c10bf81f5522
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/TrafficLightThreeLane.prefab
+  uploadId: 807558

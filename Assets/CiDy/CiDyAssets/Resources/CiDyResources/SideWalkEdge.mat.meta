@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cb5a8e7f91114df695317abc6466a62c
+timeCreated: 1456609113
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/SideWalkEdge.mat
+  uploadId: 807558

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8eb133aaaf834cc994f55fddd79bfa00
+timeCreated: 1542477244
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyShaders/BuiltIn/CiDyStandardSpecular.shader
+  uploadId: 807558

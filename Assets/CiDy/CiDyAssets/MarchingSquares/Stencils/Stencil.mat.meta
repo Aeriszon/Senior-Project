@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0239df3056d648b4b02565f599705d34
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/MarchingSquares/Stencils/Stencil.mat
+  uploadId: 807558

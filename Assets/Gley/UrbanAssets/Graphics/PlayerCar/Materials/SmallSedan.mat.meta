@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b422fc9563a92dd4ea5dae44cbeb4b5c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/PlayerCar/Materials/SmallSedan.mat
+  uploadId: 835380

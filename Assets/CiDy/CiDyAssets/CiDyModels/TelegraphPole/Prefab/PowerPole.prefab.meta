@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f0598877aa5a4d399f4dccd29667706a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/TelegraphPole/Prefab/PowerPole.prefab
+  uploadId: 807558

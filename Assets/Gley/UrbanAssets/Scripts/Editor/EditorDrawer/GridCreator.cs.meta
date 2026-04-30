@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e7055c821d7b6ff4194a22f0ee4ebcda
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Scripts/Editor/EditorDrawer/GridCreator.cs
+  uploadId: 835380

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 560aa3a17c0f4a5889b281e79d172e95
+timeCreated: 1583261670
+licenseType: Store
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyShaders/BuiltIn/Standard 2 Sided.shader
+  uploadId: 807558

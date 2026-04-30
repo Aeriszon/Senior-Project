@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b4c08cc8034ee3e4791b70960a1c22da
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/PlayerCar/Materials/SmallSedanPaintRed.mat
+  uploadId: 835380

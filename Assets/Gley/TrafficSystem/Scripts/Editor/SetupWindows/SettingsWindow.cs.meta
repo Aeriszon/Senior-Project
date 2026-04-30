@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f56360b93a8de2248b14ed87ed3cb1fc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/TrafficSystem/Scripts/Editor/SetupWindows/SettingsWindow.cs
+  uploadId: 835380

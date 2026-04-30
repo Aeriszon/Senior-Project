@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 69418c5af1b6ebb42b6eb604921f9386
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/TrafficSystem/Scripts/Editor/SetupWindows/WaypointSetup/ShowDisconnectedWaypoints.cs
+  uploadId: 835380

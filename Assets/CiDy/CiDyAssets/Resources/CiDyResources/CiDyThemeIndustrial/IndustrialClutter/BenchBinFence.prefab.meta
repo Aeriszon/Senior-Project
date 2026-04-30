@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 022cd5a63c2542dd9c97b28879bfbebd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/CiDyThemeIndustrial/IndustrialClutter/BenchBinFence.prefab
+  uploadId: 807558

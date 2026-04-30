@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d6a11e61964b4b9a8d412aade35e4196
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/MarchingSquares/Scripts/Classes/CiDyVoxelGrid.cs
+  uploadId: 807558

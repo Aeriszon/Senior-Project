@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e0cf4c43c1ef2a443b853056a4a9aaba
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Scripts/Internal/Data/CellData.cs
+  uploadId: 835380

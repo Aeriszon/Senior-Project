@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1fa952b460ccfac4d95bc0ca88dcc00c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/Environment/Materials/TrafficLightPost/RedLightOff.mat
+  uploadId: 835380

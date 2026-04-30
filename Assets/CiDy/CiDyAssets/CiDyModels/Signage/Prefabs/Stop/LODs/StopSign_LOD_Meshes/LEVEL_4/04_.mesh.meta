@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dbc4585339f48a743b0c904f04d9f53d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Signage/Prefabs/Stop/LODs/StopSign_LOD_Meshes/LEVEL_4/04_.mesh
+  uploadId: 807558

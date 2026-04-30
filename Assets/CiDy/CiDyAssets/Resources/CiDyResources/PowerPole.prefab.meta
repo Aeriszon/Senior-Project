@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 90d106134b6b4694b549905ec2fb9b4f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/PowerPole.prefab
+  uploadId: 807558

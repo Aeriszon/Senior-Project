@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5b6373c48d30dc4469415ef70d0b55a5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/Environment/Materials/Buildings/City_Buildings.mat
+  uploadId: 835380

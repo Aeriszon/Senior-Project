@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 60ab735a589c4e68915c0f2192ab4f55
+timeCreated: 1454960030
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/CiDyThemeDownTown/DownTownBuildings/Building_A15.prefab
+  uploadId: 807558

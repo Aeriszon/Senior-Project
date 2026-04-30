@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2cdd06bf98e24457887d1be6f09858eb
+timeCreated: 1454964836
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/CiDyThemeIndustrial/IndustrialBuildings/OldHouse.prefab
+  uploadId: 807558

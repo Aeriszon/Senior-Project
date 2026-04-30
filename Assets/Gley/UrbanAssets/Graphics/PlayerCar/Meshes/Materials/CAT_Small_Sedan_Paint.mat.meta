@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2b71719d548b7d24391d37eb7ce192af
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/PlayerCar/Meshes/Materials/CAT_Small_Sedan_Paint.mat
+  uploadId: 835380

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 71e3067ec4aa4836a90bc95e73361ffe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Plugins/Traingulation.cs
+  uploadId: 807558

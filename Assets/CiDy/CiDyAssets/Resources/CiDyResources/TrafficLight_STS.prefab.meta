@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 215c142e3cbb47e6ba60862018157540
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/TrafficLight_STS.prefab
+  uploadId: 807558

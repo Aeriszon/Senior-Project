@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4a721522327645eda43f3d0c538f0173
+labels:
+- Bench
+- Park
+- Prop
+- Wood
+- Vintage
+timeCreated: 1477771127
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Street/RawModels/Bench/Materials/bench
+    D p.mat
+  uploadId: 807558

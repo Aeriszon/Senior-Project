@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 974c2c6332597154d8cbc76389f5892a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Scripts/Internal/Other/VehicleLightsComponent.cs
+  uploadId: 835380

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5446f518950f4179a063d78c72cdb311
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/Resources/CiDyResources/TrafficLight.prefab
+  uploadId: 807558

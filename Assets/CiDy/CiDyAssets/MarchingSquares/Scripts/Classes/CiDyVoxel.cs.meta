@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bbf2543dff134e129fb9ac40a3de18d8
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/MarchingSquares/Scripts/Classes/CiDyVoxel.cs
+  uploadId: 807558

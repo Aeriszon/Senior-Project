@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3813a5491d62c9048b4c5466b00ed841
+timeCreated: 1454838880
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/TrafficSystem/Graphics/Vehicle/Prefabs/Vespa.prefab
+  uploadId: 835380

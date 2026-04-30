@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ee3e970c634b415583eeec466ef0db08
+timeCreated: 1578608743
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55298
+  packageName: CiDy 2
+  packageVersion: 2.7.4
+  assetPath: Assets/CiDy/CiDyAssets/CiDyModels/Signage/Prefabs/Turns/Tab_Speed_45.prefab
+  uploadId: 807558

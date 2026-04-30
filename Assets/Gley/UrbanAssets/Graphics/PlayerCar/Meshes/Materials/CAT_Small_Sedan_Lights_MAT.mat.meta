@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5c56fa1136a22643aea8264c13b8e4e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305800
+  packageName: Mobile Traffic System v3
+  packageVersion: 3.3.7
+  assetPath: Assets/Gley/UrbanAssets/Graphics/PlayerCar/Meshes/Materials/CAT_Small_Sedan_Lights_MAT.mat
+  uploadId: 835380
