@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class TrafficLawManager : MonoBehaviour
 {
+
+    // ตัวแปร Instance: ใช้ระบบ Singleton เพื่อให้เซนเซอร์กฎจราจรตัวอื่นๆ ทั่วทั้งฉาก สามารถโยนข้อมูลเข้ามาหาตัวนี้ได้โดยตรง ไม่ต้องเสียเวลาค้นหากัน
+    
     public static TrafficLawManager Instance;
 
     // 1. เพิ่มตัวแปรเก็บ Coroutine ไว้ข้างบน
@@ -28,6 +31,9 @@ public class TrafficLawManager : MonoBehaviour
     [Header("Global Data")]
     public static int globalScore = 100;        
     public int scoreAtLevelStart;
+
+    /*/ ถังเก็บสถิติ (Statistics Counters): นายสร้างตัวแปรเก็บข้อมูลการทำผิดทุกประเภท (ฝ่าไฟแดง, ขับเร็ว, ชนรถ ฯลฯ) 
+    แยกกันอย่างชัดเจน ซึ่งนี่คือ Data Structure ที่เตรียมแพ็กใส่กล่องส่งไปให้ StatsManager เซฟลง Database จริงๆ ตอนจบเกมนั่นเอง /*/
 
     // ✅ [เพิ่มชุดนี้เข้าไป] ถังเก็บสถิติสำหรับส่งให้ StatsManager
     [Header("📊 Statistics Counters")]
@@ -74,6 +80,14 @@ public class TrafficLawManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
+
+   // ฉากเปิดเกม (Cinematic Initialization)
+   // ฟังก์ชัน Start และ CinematicStartSequence:
+   // ป้องกันบั๊กโลกแตก: มีการสั่ง AudioListener.pause = false และเปิด Volume เพื่อแก้ปัญหาบั๊กเสียงหายจากการที่ผู้เล่นกด Pause เกมก่อนหน้านี้
+   /*/ ระบบ Freeze รถชั่วคราว: แทนที่จะปิดสคริปต์รถ นายเลือกใช้การล็อก Physics (FreezePositionX, Z) แต่ปล่อยแกน Y ไว้ 
+   เพื่อให้รถหล่นลงมาแตะพื้นได้สมจริงแต่ยังขับออกไปไม่ได้ จนกว่าจะหมดเวลา Cinematic /*/
+   /*/ การนับถอยหลัง (StartupWarningRoutine): มีการหน่วงเวลาและให้ระบบค่อยๆ นับถอยหลัง 
+   พอถึงเลข 3 ค่อยเล่นเสียง และเมื่อนับจบถึงจะสับสวิตช์เปิดระบบ isMonitoring = true อย่างเป็นทางการ /*/
 
     void Start()
     {
@@ -187,6 +201,13 @@ public class TrafficLawManager : MonoBehaviour
         // เริ่มนับถอยหลัง
         StartCoroutine(StartupWarningRoutine());
     }
+
+    // ตัดสินความผิด (The Penalty Logic: ReportViolation)
+    // API หลักที่เซนเซอร์ต่างๆ จะเรียกใช้เมื่อเจอคนทำผิดกฎ:
+    /*/ ระบบคัดกรอง (Failsafe): เช็กก่อนเลยว่า ถ้ายังไม่เปิดระบบ (!isMonitoring) หรือเกมจบไปแล้ว 
+        จะไม่ยอมให้มีการหักคะแนนเด็ดขาด ป้องกันการโดนหักคะแนนย้อนหลังตอนเข้าเส้นชัย
+        การลงดาบ: หักคะแนนจาก globalScore เล่นเสียงเตือน (Beep) และเรียก Coroutine เพื่อแสดง Popup แจ้งข้อหาและตัวเลขที่โดนหัก
+        สวิตช์สั่งตาย: ถ้าคะแนนเหลือ 0 (หรือติดลบ) มันจะโยนคำสั่ง TriggerGameOver() ไปปลุก GameFlowManager ให้มาปิดจบเกมทันที /*/
 
     public void ReportViolation(string violationName, int fineAmount)
     {
@@ -318,6 +339,12 @@ public class TrafficLawManager : MonoBehaviour
             warningPopup.gameObject.SetActive(false);
         }
     }
+
+    // ความสมูทของ UI (Smart UX Handling)
+    // ฟังก์ชัน SetWrongWayState:
+    /*/ เวลาขับรถย้อนศร ระบบจะขึ้นเตือนทันที แต่ปัญหาของเกมจราจรคือ "เวลาขับตัดผ่านทางแยก หรือทางม้าลาย" เซนเซอร์ถนนมันมักจะขาดตอน ทำให้ป้ายเตือนกระพริบติดๆ ดับๆ
+        แก้ปัญหานี้ด้วยการใช้ หน่วงเวลา (Debounce/Delay) ผ่าน RestoreSpeedUILater() โดยสั่งว่า 
+        "ถ้าออกจากเลนย้อนศรแล้ว อย่าเพิ่งรีบปิดป้ายเตือนนะ ให้รอสัก 2 วินาทีก่อน เผื่อมันแค่กำลังข้ามแยก ถ้า 2 วินาทีผ่านไปยังไม่มีย้อนศรเข้ามาใหม่ ค่อยเอาป้ายออก" /*/
 
     // ✅ ฟังก์ชันรับคำสั่ง (เวอร์ชันหน่วงเวลา)
     public void SetWrongWayState(bool active)
