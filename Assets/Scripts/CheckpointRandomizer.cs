@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class CheckpointRandomizer : MonoBehaviour
 {
+
+    /*/ ตัวแปรทั้งหมด (Headers): แบ่งหมวดหมู่ไว้ชัดเจนมาก ทั้งเวลา (Time Settings),
+    UI, เสียง (Audio), และฉากจบ (Win Screen Settings) 
+    การจัดระเบียบแบบนี้คือสิ่งที่ทำให้เรา Vibe Code หรือใช้ AI มาปรับแก้ค่าต่างๆ ได้ง่ายมาก /*/
+    
     [Header("Settings")]
     public Transform checkpointPool;
     public int targetCheckpoints = 2;
@@ -75,6 +80,9 @@ public class CheckpointRandomizer : MonoBehaviour
     private int collectedCount = 0;
     private bool isFinished = false;
 
+    /*/ ฟังก์ชัน Start(): พอเปิดฉากมา มันจะทำหน้าที่ "จัดเตรียมเวที" โดยการดึงเสา Checkpoint ทั้งหมดไปซ่อนไว้ก่อน 
+    (SetActive = false) รีเซ็ตเวลาให้เต็ม และสั่งเรียก Checkpoint ต้นแรกออกมาให้ผู้เล่นเห็น /*/
+    
     void Start()
     {
         currentTime = initialTime;
@@ -102,6 +110,10 @@ public class CheckpointRandomizer : MonoBehaviour
         if (winPanel != null) winPanel.SetActive(false);
     }
 
+    /*/ ฟังก์ชัน Update(): นี่คือหัวใจที่เต้นอยู่ตลอดเวลาของเกม มันจะนับเวลาถอยหลัง (Time.deltaTime)
+    ทีเด็ดคือ "ระบบแจ้งเตือน 15 วินาทีสุดท้าย" ถ้าเวลาเหลือน้อย มันจะสั่งให้ตัวเลขเป็นสีแดง 
+    และเล่นเสียง "ติ๊กต็อก" (tickClip) เป็นจังหวะเพื่อกดดันผู้เล่น (เป็น UX ที่กระตุ้นความตื่นเต้นได้ดีมาก) /*/
+    
     void Update()
     {
         // ✅ เพิ่มบรรทัดนี้บนสุดของ Update เลยครับ
@@ -142,6 +154,9 @@ public class CheckpointRandomizer : MonoBehaviour
         }
     }
 
+    /*/ ฟังก์ชัน HandleTimeUp(): ถ้าเวลาหมดปุ๊บ ฟังก์ชันนี้จะสับสวิตช์ปิดเกมทันที 
+    ปิดเสียงเครื่องยนต์ ซ่อน UI ทั้งหมด แล้วส่งสัญญาณบอก GameFlowManager ว่า "ผู้เล่นตายแล้ว (Game Over)" /*/
+    
     void HandleTimeUp()
     {
         if (audioSource != null) 
@@ -158,8 +173,11 @@ public class CheckpointRandomizer : MonoBehaviour
 
         GameFlowManager gm = FindFirstObjectByType<GameFlowManager>();
         if (gm != null) gm.GameOver(); 
-    }
+    } 
 
+    /*/ ฟังก์ชัน OnCheckpointCaptured(): เมื่อผู้เล่นขับรถชน Checkpoint มันจะบวกยอดสะสม (collectedCount++) 
+    แล้วเช็กว่า "ครบหรือยัง?" ถ้าครบแล้วจะส่งไปฉากจบ (VictorySequence) ถ้ายังไม่ครบ จะบวกเวลาเพิ่ม (AddBonusTime) เล่นเสียงเก็บของ แล้วเสกเสาต้นต่อไป/*/
+    
     public void OnCheckpointCaptured()
     {
         if (isFinished) return;
@@ -177,6 +195,164 @@ public class CheckpointRandomizer : MonoBehaviour
         }
     }
 
+    /*/ ฟังก์ชัน SpawnNextIntelligentCheckpoint(): อันนี้คือ "ลอจิกสุดล้ำ" ที่ไม่ได้สุ่มแบบหลับหูหลับตา 
+    มันจะคำนวณหาระยะทาง (Distance) และเช็กทิศทางหน้ารถ (InverseTransformPoint) เพื่อให้ชัวร์ว่า 
+    Checkpoint ต้นต่อไปจะโผล่ในระยะที่พอดี และอยู่ข้างหน้าผู้เล่นเสมอ ไม่โผล่มาข้างหลังให้ต้องถอยรถกลับ /*/
+    
+    void SpawnNextIntelligentCheckpoint()
+    {
+        if (playerTransform == null) return;
+        if (allCheckpoints == null || allCheckpoints.Count == 0) return;
+
+        List<GameObject> candidates = new List<GameObject>();
+        float minDistance = 50f;  
+        float maxDistance = 500f; 
+
+        foreach (GameObject cp in allCheckpoints)
+        {
+            if (cp == currentActiveCP) continue;
+            float dist = Vector3.Distance(playerTransform.position, cp.transform.position);
+            Vector3 localPos = playerTransform.InverseTransformPoint(cp.transform.position);
+            if (localPos.z > 0 && dist >= minDistance && dist <= maxDistance) candidates.Add(cp);
+        }
+
+        if (candidates.Count > 0)
+        {
+            currentActiveCP = candidates[Random.Range(0, candidates.Count)];
+        }
+        else
+        {
+            GameObject bestFallback = null;
+            float maxDistFound = -1f;
+            foreach (GameObject cp in allCheckpoints)
+            {
+                if (cp == currentActiveCP) continue;
+                Vector3 lp = playerTransform.InverseTransformPoint(cp.transform.position);
+                if (lp.z > 0) 
+                {
+                    float d = Vector3.Distance(playerTransform.position, cp.transform.position);
+                    if (d > maxDistFound) { maxDistFound = d; bestFallback = cp; }
+                }
+            }
+            currentActiveCP = bestFallback;
+        }
+
+        if (currentActiveCP == null)
+        {
+            GameObject oldCP = currentActiveCP;
+            int attempts = 0;
+            do {
+                currentActiveCP = allCheckpoints[Random.Range(0, allCheckpoints.Count)];
+                attempts++;
+            } while (currentActiveCP == oldCP && attempts < 10 && allCheckpoints.Count > 1); 
+        }
+
+        if (currentActiveCP != null)
+        {
+            currentActiveCP.SetActive(true);
+            if (collectedCount == targetCheckpoints - 1) ApplyFinalCheckpointVisuals(currentActiveCP);
+        }
+    }
+
+    /*/ ฟังก์ชัน ApplyFinalCheckpointVisuals(): พอถึง Checkpoint ต้นสุดท้าย 
+    มันจะสั่งเปลี่ยนสีเสาเป็นสีเขียว (greenDiskMat) เพื่อบอกใบ้ให้ผู้เล่นรู้ว่า "นี่คือเส้นชัย!" /*/
+    
+    void ApplyFinalCheckpointVisuals(GameObject cp)
+    {
+        MeshRenderer[] renderers = cp.GetComponentsInChildren<MeshRenderer>();
+        foreach (var r in renderers)
+        {
+            string objName = r.name.ToLower();
+            if (objName.Contains("base")) 
+            {
+                 if (greenCurtainMat != null) r.material = greenCurtainMat; 
+            }
+            else if (objName.Contains("checkpoint"))
+            {
+                 if (greenDiskMat != null) r.material = greenDiskMat; 
+            }
+            else 
+            {
+                 if (greenDiskMat != null) r.material = greenDiskMat; 
+            }
+        }
+        Light l = cp.GetComponentInChildren<Light>();
+        if (l != null) l.color = greenLightColor;
+    }
+
+    public void AddBonusTime()
+    {
+        currentTime += bonusTime;
+        
+        if (currentTime > 15f)
+        {
+            if (audioSource != null) audioSource.Stop(); 
+            if (audioSource != null) audioSource.clip = null; 
+            if (timerText != null) timerText.color = normalColor;
+            nextTickTime = Time.time + 2.0f; 
+        }
+
+        UpdateTimerUI();
+        if (timerText != null) StartCoroutine(FlashTimerEffect());
+    }
+    
+    IEnumerator FlashTimerEffect()
+    {
+        isFlashing = true;
+        if (timerText != null) timerText.color = bonusColor;
+        yield return new WaitForSeconds(0.5f);
+        isFlashing = false;
+    }
+
+    void UpdateTimerUI()
+    {
+        if (timerText != null)
+        {
+            int minutes = Mathf.FloorToInt(currentTime / 60F);
+            int seconds = Mathf.FloorToInt(currentTime % 60F);
+            timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+        }
+    }
+
+    void UpdateProgressUI()
+    {
+        if (progressText != null)
+        {
+            progressText.text = $"{collectedCount}/{targetCheckpoints}";
+            progressText.color = normalColor;
+        }
+    }
+    
+    public void LoadNextLevel()
+    {
+        Time.timeScale = 1f; 
+        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextIndex < SceneManager.sceneCountInBuildSettings) SceneManager.LoadScene(nextIndex);
+        else SceneManager.LoadScene("MainMenu");
+    }
+    
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+
+        // 👇 แทรกบรรทัดนี้: ล้างคะแนนกลับเป็น 100
+        TrafficLawManager.globalScore = 100;
+        
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public Transform GetCurrentTarget()
+    {
+        if (currentActiveCP != null) return currentActiveCP.transform;
+        return null;
+    }
+
+    // ฉากจบและการสื่อสารข้ามระบบ (VictorySequence)
+    // หยุดเวลาทันที และ สับสวิตช์ปิดระบบจับผิดของตำรวจจราจร (TrafficLawManager) เพื่อไม่ให้โดนหักคะแนนย้อนหลัง
+    // ส่ง Data สถิติการขับขี่ทั้งหมด (ฝ่าไฟแดง, ชนรถ, ปีนฟุตบาท, ขับย้อนศร) ไปเซฟลงฐานข้อมูลผ่าน StatsManager.Instance.SaveLog()
+    // ปิดระบบแจ้งเตือนออกนอกเลน (OffRoadSystem) และล็อกปุ่ม Pause เกม
+    // คำนวณ "คะแนนโบนัสขับขี่ปลอดภัย" แล้วส่งไม้ต่อให้ฟังก์ชันแอนิเมชันสรุปคะแนน
+    
     // --- แก้ไขจุดนี้ครับ (VictorySequence) ---
     IEnumerator VictorySequence()
     {
@@ -298,6 +474,12 @@ public class CheckpointRandomizer : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    // ระบบแอนิเมชันตอนจบ (ScoreAnimationRoutine / FinalLevelAnimationRoutine)
+    // ตัวเลขคะแนนจะค่อยๆ วิ่งขึ้น (Count Up) โดยใช้คำสั่ง Mathf.Lerp
+    // มีการไล่เฉดสีตัวเลขตามเกรดคะแนน และทำเอฟเฟกต์เฟดข้อความโบนัส
+    /*/ มีระบบ "ตัดเกรด" (S, A, B, C, F) และใช้ PulseTextRoutine 
+    ทำให้ตัวอักษรเกรดค่อยๆ สว่างและมืดสลับกัน (เหมือนกำลังหายใจ) ดูลื่นไหลกว่าการกระพริบแบบแข็งๆ /*/
+    
     // 🎬 ฟังก์ชันแอนิเมชั่น (รวมร่าง!)
     IEnumerator ScoreAnimationRoutine(int startScore, int bonus, int targetScore)
     {
@@ -555,150 +737,5 @@ public class CheckpointRandomizer : MonoBehaviour
     IEnumerator BlinkTextRoutine(TextMeshProUGUI targetText)
     {
         while (true) { targetText.alpha = 1f; yield return new WaitForSecondsRealtime(1.5f); targetText.alpha = 0f; yield return new WaitForSecondsRealtime(1.5f); }
-    }
-
-    void SpawnNextIntelligentCheckpoint()
-    {
-        if (playerTransform == null) return;
-        if (allCheckpoints == null || allCheckpoints.Count == 0) return;
-
-        List<GameObject> candidates = new List<GameObject>();
-        float minDistance = 50f;  
-        float maxDistance = 500f; 
-
-        foreach (GameObject cp in allCheckpoints)
-        {
-            if (cp == currentActiveCP) continue;
-            float dist = Vector3.Distance(playerTransform.position, cp.transform.position);
-            Vector3 localPos = playerTransform.InverseTransformPoint(cp.transform.position);
-            if (localPos.z > 0 && dist >= minDistance && dist <= maxDistance) candidates.Add(cp);
-        }
-
-        if (candidates.Count > 0)
-        {
-            currentActiveCP = candidates[Random.Range(0, candidates.Count)];
-        }
-        else
-        {
-            GameObject bestFallback = null;
-            float maxDistFound = -1f;
-            foreach (GameObject cp in allCheckpoints)
-            {
-                if (cp == currentActiveCP) continue;
-                Vector3 lp = playerTransform.InverseTransformPoint(cp.transform.position);
-                if (lp.z > 0) 
-                {
-                    float d = Vector3.Distance(playerTransform.position, cp.transform.position);
-                    if (d > maxDistFound) { maxDistFound = d; bestFallback = cp; }
-                }
-            }
-            currentActiveCP = bestFallback;
-        }
-
-        if (currentActiveCP == null)
-        {
-            GameObject oldCP = currentActiveCP;
-            int attempts = 0;
-            do {
-                currentActiveCP = allCheckpoints[Random.Range(0, allCheckpoints.Count)];
-                attempts++;
-            } while (currentActiveCP == oldCP && attempts < 10 && allCheckpoints.Count > 1); 
-        }
-
-        if (currentActiveCP != null)
-        {
-            currentActiveCP.SetActive(true);
-            if (collectedCount == targetCheckpoints - 1) ApplyFinalCheckpointVisuals(currentActiveCP);
-        }
-    }
-
-    void ApplyFinalCheckpointVisuals(GameObject cp)
-    {
-        MeshRenderer[] renderers = cp.GetComponentsInChildren<MeshRenderer>();
-        foreach (var r in renderers)
-        {
-            string objName = r.name.ToLower();
-            if (objName.Contains("base")) 
-            {
-                 if (greenCurtainMat != null) r.material = greenCurtainMat; 
-            }
-            else if (objName.Contains("checkpoint"))
-            {
-                 if (greenDiskMat != null) r.material = greenDiskMat; 
-            }
-            else 
-            {
-                 if (greenDiskMat != null) r.material = greenDiskMat; 
-            }
-        }
-        Light l = cp.GetComponentInChildren<Light>();
-        if (l != null) l.color = greenLightColor;
-    }
-
-    public void AddBonusTime()
-    {
-        currentTime += bonusTime;
-        
-        if (currentTime > 15f)
-        {
-            if (audioSource != null) audioSource.Stop(); 
-            if (audioSource != null) audioSource.clip = null; 
-            if (timerText != null) timerText.color = normalColor;
-            nextTickTime = Time.time + 2.0f; 
-        }
-
-        UpdateTimerUI();
-        if (timerText != null) StartCoroutine(FlashTimerEffect());
-    }
-    
-    IEnumerator FlashTimerEffect()
-    {
-        isFlashing = true;
-        if (timerText != null) timerText.color = bonusColor;
-        yield return new WaitForSeconds(0.5f);
-        isFlashing = false;
-    }
-
-    void UpdateTimerUI()
-    {
-        if (timerText != null)
-        {
-            int minutes = Mathf.FloorToInt(currentTime / 60F);
-            int seconds = Mathf.FloorToInt(currentTime % 60F);
-            timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-        }
-    }
-
-    void UpdateProgressUI()
-    {
-        if (progressText != null)
-        {
-            progressText.text = $"{collectedCount}/{targetCheckpoints}";
-            progressText.color = normalColor;
-        }
-    }
-    
-    public void LoadNextLevel()
-    {
-        Time.timeScale = 1f; 
-        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextIndex < SceneManager.sceneCountInBuildSettings) SceneManager.LoadScene(nextIndex);
-        else SceneManager.LoadScene("MainMenu");
-    }
-    
-    public void LoadMainMenu()
-    {
-        Time.timeScale = 1f;
-
-        // 👇 แทรกบรรทัดนี้: ล้างคะแนนกลับเป็น 100
-        TrafficLawManager.globalScore = 100;
-        
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    public Transform GetCurrentTarget()
-    {
-        if (currentActiveCP != null) return currentActiveCP.transform;
-        return null;
     }
 }
